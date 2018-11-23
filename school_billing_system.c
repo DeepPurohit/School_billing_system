@@ -138,11 +138,14 @@ int main(){
 			                    {
 			                    	if(m_op>=1 && m_op<=3)
 			                    		break;
-
+									else if(isalpha(m_op)){
+										printf("\nplease enter numerals only : 1/2/3 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&m_op);
+									}
 			                    	else
 			                    	{
 			                    		printf("\nplease enter numerals only : 1/2/3 \n");
-			                    		printf("\nEnter the number of accounts to be added\t");
 			                             fflush(stdin);
 			                    		scanf("%d",&m_op);
 									}
@@ -159,11 +162,14 @@ int main(){
 			                    {
 			                    	if(s_op>=1 && s_op<=6)
 			                    		break;
-
+									else if(isalpha(s_op)){
+										printf("\nplease enter numerals only : 1/2/3/4/5/6 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&s_op);
+									}
 			                    	else
 			                    	{
 			                    		printf("\nplease enter numerals only : 1/2/3/4/5/6 \n");
-
 			                             fflush(stdin);
 			                    		scanf("%d",&s_op);
 									}
@@ -208,7 +214,11 @@ int main(){
 			                    {
 			                    	if(t_op>=1 && t_op<=6)
 			                    		break;
-
+									else if(isalpha(t_op)){
+										printf("\nplease enter numerals only : 1/2/3/4/5/6 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&t_op);
+									}
 			                    	else
 			                    	{
 			                    		printf("\nplease enter numerals only : 1/2/3/4/5/6 \n");
@@ -523,6 +533,26 @@ void t_disp(int ttl){
     printf("\n\t********************* Select Option To Display ***************************\n\n");
     printf("\t1. PRT Teachers\n\t2. TGT Teachers\n\t3. PGT Teachers\n\t4. View all\n\t5. Salary Status - Not Paid\n\t6. Salary Status Paid\n\t7. Exit\n\n");
     scanf("%d",&choice);
+    
+    			while(choice>=0 || choice<0)
+			                    {
+			                    	if(choice>=1 && choice<=7)
+			                    		break;
+									else if(isalpha(choice)){
+										printf("\nplease enter numerals only : 1/2/3/4/5/6/7 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&choice);
+									}
+			                    	else
+			                    	{
+			                    		printf("\nplease enter numerals only : 1/2/3/4/5/6/7 \n");
+
+			                             fflush(stdin);
+			                    		scanf("%d",&choice);
+									}
+								}
+    
+    
     switch(choice){
     	case 1:
     			printf("********************* Details of PRT Teachers **************************\n\n");
@@ -884,6 +914,23 @@ void t_edit(int ttl){
 			printf("\n\tChoose Option to EDIT Details\n");
 			printf("\t1. Name\n\t2. Address\n\t3. Designation\n\t4. Phone number\n\t5. Marital Status\n\t6. Salary\n\t7. Salary Status\n\t8. Go Back\n\n");
 			scanf("%d",&m_op);
+			while(m_op>=0 || m_op<0)
+			                    {
+			                    	if(m_op>=1 && m_op<=8)
+			                    		break;
+									else if(isalpha(m_op)){
+										printf("\nplease enter numerals only : 1/2/3/4/5/6/7/8 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&m_op);
+									}
+			                    	else
+			                    	{
+			                    		printf("\nplease enter numerals only : 1/2/3/4/5/6/7/8 \n");
+
+			                             fflush(stdin);
+			                    		scanf("%d",&m_op);
+									}
+								}
 			switch(m_op){
 				case 1:
 						fflush(stdin);
@@ -1550,7 +1597,9 @@ void s_add(){
                              ptr_s[i]->adm_no=ptr_s[i-1]->adm_no+1;
                              
 
-
+							
+						
+							
         printf("\n\tContact number : ");
         fflush(stdin);
         scanf("%s",ptr_s[i]->contact_no);
@@ -1593,9 +1642,9 @@ void s_add(){
 
                         }
         }
-		   
-		   	ptr_s[i]->status=0;
-		   
+        
+        				ptr_s[i]->status=0;
+        
         printf("\n\n");
 	
     prev_s_total=s_total;
@@ -1633,6 +1682,24 @@ void s_disp(int ttl){
     		printf("\t1. Display Class Wise\n\t2. Display By Admission no.\n\t3. Go Back\n\n");
     		fflush(stdin);
     		scanf("%d",&choice);
+    		
+    				while(choice>=0 || choice<0)
+			                    {
+			                    	if(choice>=1 && choice<=3)
+			                    		break;
+									else if(isalpha(choice)){
+										printf("\nplease enter numerals only : 1/2/3 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&choice);
+									}
+			                    	else
+			                    	{
+			                    		printf("\nplease enter numerals only : 1/2/3 \n");
+
+			                             fflush(stdin);
+			                    		scanf("%d",&choice);
+									}
+								}
 
     		switch(choice){
 
@@ -1756,7 +1823,27 @@ void s_edit(int ttl){
     printf("\n\tSelect option to edit\n\n");
     printf("\t1. Edit Student Details\n\t2. Change Class Wise Fees Submission Status\n\t3. Go Back\n");
     scanf("%d",&option);
+				
+				while(option>=0 || option<0)
+			                    {
+			                    	if(option>=1 && option<=3)
+			                    		break;
+									else if(isalpha(option)){
+										printf("\nplease enter numerals only : 1/2/3 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&option);
+									}
+			                    	else
+			                    	{
+			                    		printf("\nplease enter numerals only : 1/2/3 \n");
 
+			                             fflush(stdin);
+			                    		scanf("%d",&option);
+									}
+								}
+				
+				
+				
     switch(option){
     	case 1:
     			printf("**************************** Edit Details *********************************************\n\n");
@@ -1815,6 +1902,25 @@ void s_edit(int ttl){
 						printf("\nChoose Option to EDIT Details\n");
 						printf("\t1. Name\n\t2. Class\n\t3. Section\n\t4. Gender\n\t5. Phone number\n\t6. Address\n\t7. Fees Status\n\t8. Go back\n");
 						scanf("%d",&m_op);
+									
+							while(m_op>=0 || m_op<0)
+			                    {
+			                    	if(m_op>=1 && m_op<=8)
+			                    		break;
+									else if(isalpha(m_op)){
+										printf("\nplease enter numerals only : 1/2/3/4/5/6/7/8 \n");
+			                             fflush(stdin);
+			                    		scanf("%d",&m_op);
+									}
+			                    	else
+			                    	{
+			                    		printf("\nplease enter numerals only : 1/2/3/4/5/6/7/8 \n");
+
+			                             fflush(stdin);
+			                    		scanf("%d",&m_op);
+									}
+								}
+									
 						switch(m_op){
 							case 1:
 								    fflush(stdin);
@@ -2375,5 +2481,4 @@ void s_data_delete(int ttl){
 
 }
 }
-
 
