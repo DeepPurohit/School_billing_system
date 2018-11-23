@@ -1593,6 +1593,9 @@ void s_add(){
 
                         }
         }
+		   
+		   	ptr_s[i]->status=0;
+		   
         printf("\n\n");
 	
     prev_s_total=s_total;
